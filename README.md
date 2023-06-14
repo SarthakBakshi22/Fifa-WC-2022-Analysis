@@ -8,7 +8,7 @@ Analysis of FIFA 2022 WC based on Daily Tweets, Subreddit Comments and 4chan Boa
     * [MongoDB Website](https://www.mongodb.com/)
 * `Spyder` - IDE used to execute python code [Spyder IDE website](https://www.spyder-ide.org/)
 
-*'Libraries'- Numpy, pandas, etc.*
+*`Libraries`- Numpy, pandas, etc.*
 
 ## Three data-source documentation
 
