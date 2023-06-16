@@ -1,4 +1,4 @@
-Analysis of FIFA 2022 WC based on Daily Tweets, Subreddit Comments and 4chan Boards by extracting data using API calls and storing in MongoDB every day during the tournament to determine racial-abuses,critisism,hateful comments on Players, Teams as well as predict the popularity of Player and Teams as the tournament progresses.
+# Analysis of FIFA 2022 WC based on Daily Tweets, Subreddit Comments and 4chan Boards by extracting data using API calls and storing in MongoDB every day during the tournament to determine racial-abuses,critisism,hateful comments on Players, Teams as well as predict the popularity of Player and Teams as the tournament progresses.
 
 ## Tech-stack
 
