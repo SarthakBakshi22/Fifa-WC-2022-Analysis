@@ -1,0 +1,1 @@
+- In this implementation I used Flask Framework to visualize and display the statistics, graphs and comparisons based on the data collected and filtered
