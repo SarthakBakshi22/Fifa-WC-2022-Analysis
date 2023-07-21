@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FIFA ANALYSIS</title>
+<style>
+		.dropbtn {
+		  background-color: #04AA6D;
+		  color: white;
+		  padding: 16px;
+		  font-size: 16px;
+		  border: none;
+		}
+
+		.dropdownT1 {
+		  position: left;
+		  display: inline-block;
+		}
+        .dropdownT2 {
+		  position: left;
+		  display: inline-block;
+		}
+
+        .dropdownP1 {
+		  position: right;
+		  display: inline-block;
+		}
+        .dropdownP2 {
+		  position: right;
+		  display: inline-block;
+		}
+		.dropdown-content {
+		  display: none;
+		  position: absolute;
+		  background-color: #f1f1f1;
+		  min-width: 160px;
+		  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		  z-index: 1;
+		}
+
+		.dropdown-content a {
+		  color: black;
+		  padding: 12px 16px;
+		  text-decoration: none;
+		  display: block;
+		}
+
+		.dropdown-content a:hover {background-color: #ddd;}
+
+		.dropdown:hover .dropdown-content {display: block;}
+
+		.dropdown:hover .dropbtn {background-color: #3e8e41;}
+</style>
+</head>
+<body style="background-color:#D7BDE2;">
+<center>
+
+    <font color="black" size="4" style="font-family: avenir">
+
+        <h1 style="color: black">CS 515 - 01 Social Media Data Science Pipeline</h1>
+        <h2 style="color: black">Group : THE MARVELS</h2>
+        <h2 style="color: black">FIFA 2022 ANALYSIS</h2>
+
+        <body>
+            <form id="mainf" action="{{ url_for('player') }}" method="post" align="center">
+              
+                <label for="start"option value = "Star Date">Start Date:</label>
+                <input type="date" id="start" name="start" form="mainf">
+                <label for="end">End Date:</label>
+                <input type="date" id="end" name="end" form="mainf">
+                <br><br> 
+
+                  <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon">PLAYER 1</span>
+                            <select id ="player1" name="player1" class="selectpicker form-control" form="mainf">
+                              <option value = "Robert Lewandowski"> Robert Lewandowski</option>
+                              <option value = "Memphis Depay"> Memphis Depay	    </option>
+                              <option value = "Harry Kane"> Harry Kane        </option>
+                              <option value = "Christian Politic "> Christian Politic </option>
+                              <option value = "Gareth Bale"> Gareth Bale       </option>
+                              <option value = "Lionel Messi"> Lionel Messi      </option>
+                              <option value = "Rodrigo DePaul"> Rodrigo DePaul    </option>
+                              <option value = "Christian Eriksen "> Christian Eriksen </option>
+                              <option value = "Kylian Mbappe     "> Kylian Mbappe     </option>
+                              <option value = "Olivier Giroud    "> Olivier Giroud    </option>
+                              <option value = "Manuel Neuer      "> Manuel Neuer      </option>
+                              <option value = "Thomas Muller     "> Thomas Muller     </option>
+                              <option value = "Kevin DeBruyne    "> Kevin DeBruyne    </option>
+                              <option value = "Eden Hazard       "> Eden Hazard       </option>
+                              <option value = "Luka Modric       "> Luka Modric       </option>
+                              <option value = "Ivan Perisic      "> Ivan Perisic      </option>
+                              <option value = "Achraf Hakimi     "> Achraf Hakimi     </option>
+                              <option value = "Neymar            "> Neymar            </option>
+                              <option value = "Vinicius Junior   "> Vinicius Junior   </option>
+                              <option value = "Cristiano Ronaldo"> Cristiano Ronaldo </option>
+                              <option value = "Bruno Fernandes   "> Bruno Fernandes   </option>
+                              <option value = "Luis Suarez       "> Luis Suarez       </option>
+                            </select>
+
+                            <span class="input-group-addon">PLAYER 2</span>
+                            <select id ="player2" name="player2" class="selectpicker form-control" form="mainf">
+                              <option value = "Robert Lewandowski"> Robert Lewandowski</option>
+                              <option value = "Memphis Depay"> Memphis Depay	    </option>
+                              <option value = "Harry Kane"> Harry Kane        </option>
+                              <option value = "Christian Politic "> Christian Politic </option>
+                              <option value = "Gareth Bale"> Gareth Bale       </option>
+                              <option value = "Lionel Messi"> Lionel Messi      </option>
+                              <option value = "Rodrigo DePaul"> Rodrigo DePaul    </option>
+                              <option value = "Christian Eriksen "> Christian Eriksen </option>
+                              <option value = "Kylian Mbappe"> Kylian Mbappe     </option>
+                              <option value = "Olivier Giroud    "> Olivier Giroud    </option>
+                              <option value = "Manuel Neuer      "> Manuel Neuer      </option>
+                              <option value = "Thomas Muller     "> Thomas Muller     </option>
+                              <option value = "Kevin DeBruyne    "> Kevin DeBruyne    </option>
+                              <option value = "Eden Hazard       "> Eden Hazard       </option>
+                              <option value = "Luka Modric       "> Luka Modric       </option>
+                              <option value = "Ivan Perisic      "> Ivan Perisic      </option>
+                              <option value = "Achraf Hakimi     "> Achraf Hakimi     </option>
+                              <option value = "Neymar            "> Neymar            </option>
+                              <option value = "Vinicius Junior   "> Vinicius Junior   </option>
+                              <option value = "Cristiano Ronaldo"> Cristiano Ronaldo </option>
+                              <option value = "Bruno Fernandes   "> Bruno Fernandes   </option>
+                              <option value = "Luis Suarez       "> Luis Suarez       </option>
+                            </select>
+<br><br>
+</form>
+<input type = "submit" value="GENERATE GRAPH PLAYER" form="mainf">
+
+<br><br>
+
+
+<form id="notmain" action="{{ url_for('team') }}" method="post" align="center">
+              
+    <label for="start"option value = "Star Date">Start Date:</label>
+    <input type="date" id="start" name="start" form="notmain">
+    <label for="end">End Date:</label>
+    <input type="date" id="end" name="end" form="notmain">
+    <br><br> 
+    <div class="form-group">
+        <div class="input-group">
+                            <span class="input-group-addon">Team 1</span>
+                                <select id='team1' name='team1' class="selectpicker form-control" form="notmain">
+                                    <option value = "Netherlands ">Netherlands</option>
+                                    <option value = "Senegal ">Senegal</option>
+                                    <option value = "Ecuador ">Ecuador</option>
+                                    <option value = "England ">England</option>
+                                    <option value = "USA     ">USA</option>
+                                    <option value = "Iran     ">Iran</option>
+                                    <option value = "Wales     ">Wales</option>
+                                    <option value = "Argentina ">Argentina</option>
+                                    <option value = "Poland     ">Poland</option>
+                                    <option value = "Mexico     ">Mexico</option>
+                                    <option value = "Saudi Arabi">Saudi Arabia</option>
+                                    <option value = "France     ">France</option>
+                                    <option value = "Australia ">Australia</option>
+                                    <option value = "Tunisia ">Tunisia</option>
+                                    <option value = "Denmark ">Denmark</option>
+                                    <option value = "Japan     ">Japan</option>
+                                    <option value = "Spain     ">Spain</option>
+                                    <option value = "Germany ">Germany</option>
+                                    <option value = "Costa Rica ">Costa Rica</option>
+                                    <option value = "Morocco ">Morocco</option>
+                                    <option value = "Croatia ">Croatia</option>
+                                    <option value = "Belgium ">Belgium</option>
+                                    <option value = "Canada     ">Canada</option>
+                                    <option value = "Brazil     ">Brazil</option>
+                                    <option value = "Switzerland">Switzerland</option>
+                                    <option value = "Cameroon ">Cameroon</option>
+                                    <option value = "Serbia     ">Serbia</option>
+                                    <option value = "Portugal ">Portugal</option>
+                                    <option value = "South Korea">South Korea</option>
+                                    <option value = "Uruguay ">Uruguay</option>
+                                    <option value = "Ghana     ">Ghana</option>
+                                </select>
+
+                            <span class="input-group-addon">Team 2</span>
+                                <select id='team2' name='team2' class="selectpicker form-control" form="notmain">
+                                    <option value = "Netherlands ">Netherlands</option>
+                                    <option value = "Senegal ">Senegal</option>
+                                    <option value = "Ecuador ">Ecuador</option>
+                                    <option value = "England ">England</option>
+                                    <option value = "USA     ">USA</option>
+                                    <option value = "Iran     ">Iran</option>
+                                    <option value = "Wales     ">Wales</option>
+                                    <option value = "Argentina ">Argentina</option>
+                                    <option value = "Poland     ">Poland</option>
+                                    <option value = "Mexico     ">Mexico</option>
+                                    <option value = "Saudi Arabi">Saudi Arabia</option>
+                                    <option value = "France     ">France</option>
+                                    <option value = "Australia ">Australia</option>
+                                    <option value = "Tunisia ">Tunisia</option>
+                                    <option value = "Denmark ">Denmark</option>
+                                    <option value = "Japan     ">Japan</option>
+                                    <option value = "Spain     ">Spain</option>
+                                    <option value = "Germany ">Germany</option>
+                                    <option value = "Costa Rica ">Costa Rica</option>
+                                    <option value = "Morocco ">Morocco</option>
+                                    <option value = "Croatia ">Croatia</option>
+                                    <option value = "Belgium ">Belgium</option>
+                                    <option value = "Canada     ">Canada</option>
+                                    <option value = "Brazil     ">Brazil</option>
+                                    <option value = "Switzerland">Switzerland</option>
+                                    <option value = "Cameroon ">Cameroon</option>
+                                    <option value = "Serbia     ">Serbia</option>
+                                    <option value = "Portugal ">Portugal</option>
+                                    <option value = "South Korea">South Korea</option>
+                                    <option value = "Uruguay ">Uruguay</option>
+                                    <option value = "Ghana     ">Ghana</option>
+                                </select>
+                    </div>
+                    
+                </div>
+                </form>
+           
+                <input type = "submit" value="GENERATE GRAPH TEAM" form="notmain">
+            
+            
+         <br><br>
+<form id="topplay" action="{{ url_for('one') }}" method="post" align="center">
+
+
+</form>
+         <input type = "submit" value="GENERATE GRAPH TOP 5 PLAYERS" form="topplay">
+
+         <br><br>
+<form id="topteam" action="{{ url_for('two') }}" method="post" align="center">
+
+
+</form>
+         <input type = "submit" value="GENERATE GRAPH TOP 5 TEAMS" form="topteam">
+
+    </font>
+</center>
+</body>
+</html>
